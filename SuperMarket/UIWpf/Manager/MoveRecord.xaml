@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="SuperMarket.UIWpf.Manager.MoveRecord"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SuperMarket.UIWpf.Manager"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="630">
+    <Grid Background="#FFD4CDCD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="0" Margin="0,40,0,0" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="630" Height="230" VerticalAlignment="Top" Grid.RowSpan="2">
+            <DataGrid ColumnWidth="*" x:Name="dataGrid" Margin="10,5,9,5" MouseLeftButtonDown="dataGrid_MouseLeftButtonDown" SelectionChanged="dataGrid_SelectionChanged"/>
+        </Border>
+        <Border BorderThickness="1" Background="#FFFFF8F8" CornerRadius="10" Grid.RowSpan="2" Margin="0,0,0,415"/>
+        <Border BorderThickness="1" Margin="0,315,0,0" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="630" Height="135" VerticalAlignment="Top" Grid.RowSpan="2">
+        </Border>
+        <Border BorderThickness="1" Background="#FFFFF8F8" CornerRadius="10" Height="35" VerticalAlignment="Top" Margin="5,275,5,0" Grid.RowSpan="2"/>
+        <Label x:Name="label" Content="移货信息" Margin="9,2,505,415" FontSize="18.667" FontFamily=".HeitiUI SC" VerticalContentAlignment="Center" Foreground="#FF535050" Grid.RowSpan="2"/>
+        <Label x:Name="label_Copy" Content="移货信息详情" Margin="4,280,470,137" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2"/>
+        <Label x:Name="label_Copy2" Content="操作员:" Margin="439,5,111,422" FontSize="10.667" FontFamily=".HeitiUI SC" VerticalContentAlignment="Center" Foreground="#FF535050" Grid.RowSpan="2"/>
+        <Button x:Name="Search_Copy1" Margin="416,7,0,0" Background="#FF636A63" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="24" Height="23" VerticalAlignment="Top" BorderThickness="0" Grid.RowSpan="2" Click="Search_Copy1_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="8,8,8,8" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF8D8D8D" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Horizontal" Width="24" Height="Auto" HorizontalAlignment="Right" Margin="0,3,3,3">
+                            <Image Width="24" Source="/SuperMarket;component/Source/查询.png" HorizontalAlignment="Center" Margin="0,2,0,-1" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <DataGrid  ColumnWidth="*" x:Name="dataGridDetail" Margin="10,325,9,9" Grid.RowSpan="2"/>
+        <DatePicker x:Name="starttime" HorizontalAlignment="Left" Margin="275,8,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Height="20" Width="64"/>
+        <DatePicker x:Name="endtime" HorizontalAlignment="Left" Margin="350,8,0,0" VerticalAlignment="Top" Grid.RowSpan="2" Height="20" Width="64"/>
+        <Label x:Name="label_Copy1" Content="单号:" Margin="90,7,507,420" FontSize="10.667" FontFamily=".HeitiUI SC" VerticalContentAlignment="Center" Foreground="#FF535050" Grid.RowSpan="2"/>
+
+
+        <Border  BorderThickness="0" CornerRadius="8,8,8,8" x:Name="btncopy" Margin="120,6,395,419" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFA0A0A0" Offset="0.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBox x:Name="moveIDBox" Margin="5,0" TextWrapping="Wrap" Grid.RowSpan="2" Background="{x:Null}" SelectionOpacity="0" BorderThickness="0" SelectionBrush="White" Foreground="White" VerticalContentAlignment="Center" FontSize="18.667"/>
+        </Border>
+
+        <Button x:Name="Search_Copy2" Margin="240,7,365,420" Background="#FF636A63" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" BorderThickness="0" Grid.RowSpan="2" Click="Search_Copy2_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="8,8,8,8" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF8D8D8D" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Horizontal" Width="24" Height="Auto" HorizontalAlignment="Right" Margin="0,3,3,3">
+                            <Image Width="24" Source="/SuperMarket;component/Source/查询.png" HorizontalAlignment="Center" Margin="0,2,0,-1" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border  BorderThickness="0" CornerRadius="8,8,8,8" x:Name="btncopy_Copy" Margin="480,5,35,420" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFA0A0A0" Offset="0.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBox x:Name="moveIDBox1" Margin="5,0" TextWrapping="Wrap" Grid.RowSpan="2" Background="{x:Null}" SelectionOpacity="0" BorderThickness="0" SelectionBrush="White" Foreground="White" VerticalContentAlignment="Center" FontSize="18.667"/>
+        </Border>
+        <Button x:Name="Search_Copy" Margin="600,7,5,420" Background="#FF636A63" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" BorderThickness="0" Grid.RowSpan="2" Click="Search_Copy_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="8,8,8,8" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF8D8D8D" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Horizontal" Width="24" Height="Auto" HorizontalAlignment="Right" Margin="0,3,3,3">
+                            <Image Width="24" Source="/SuperMarket;component/Source/查询.png" HorizontalAlignment="Center" Margin="0,2,0,-1" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</UserControl>

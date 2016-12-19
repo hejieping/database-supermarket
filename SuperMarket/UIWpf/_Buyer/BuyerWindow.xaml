@@ -1,0 +1,154 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="WpfApplication3.buyerWindow"
+	x:Name="Window"
+	Title="buyerWindow"
+	Width="900" Height="600">
+	<Grid Background="#FFBFBFBF">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Border BorderThickness="1" Margin="7,61,0,58" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="223"/>
+
+		<Border BorderThickness="1" Margin="245,64,0,469" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="610"/>
+		<Border BorderThickness="1" Margin="245,102,0,280" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="610"/>
+		<Border BorderThickness="1" Margin="245,293,0,237" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="610"/>
+		<Border BorderThickness="1" Margin="245,333,0,61" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="610"/>
+		<Button x:Name="buttonTemplate_Copy7" Margin="25,55,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="185" Height="113.5" VerticalAlignment="Top" BorderThickness="0" Content="">
+			<Button.Template>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,10,-3,0">
+						<Border.Background>
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+								<GradientStop Color="#FF47A447" Offset="0.0" />
+							</LinearGradientBrush>
+						</Border.Background>
+						<StackPanel Orientation="Vertical" Width="154" Height="Auto" HorizontalAlignment="Right" Margin="0,0,10,0">
+							<Image Width="84" Source="/SuperMarket;component/Source/开始移货.png" HorizontalAlignment="Center" Height="47" Margin="34,0,36,0" />
+							<TextBlock Width="144" HorizontalAlignment="Right" Margin="0,9" VerticalAlignment="Stretch" FontSize="24" UseLayoutRounding="True"><Run  FontSize="30" Text="开始采购"/></TextBlock>
+						</StackPanel>
+					</Border>
+				</ControlTemplate>
+			</Button.Template>
+		</Button>
+		<Image x:Name="image" HorizontalAlignment="Right" Height="50" VerticalAlignment="Top" Width="892" Source="Source/1.jpg" Stretch="Fill"/>
+		<Label x:Name="label" Content="TongJISuperMarket" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="40" Width="225" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="21.333"/>
+		<Label x:Name="label1" Content="2016-07-19 09:40" HorizontalAlignment="Left" Margin="765,20,0,0" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+		<Label x:Name="label_Copy" Content="通知:&#xA;数据库大家辛苦了！&#xA;放假回家好好休息一下！" HorizontalAlignment="Left" Margin="430,0,0,0" VerticalAlignment="Top" Height="50" Width="325" Foreground="White" FontSize="10.667"/>
+		<Button x:Name="buttonTemplate_Copy" Margin="25,168.5,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="185" Height="113.5" VerticalAlignment="Top" BorderThickness="0" Content="">
+			<Button.Template>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,10,-3,0">
+						<Border.Background>
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+								<GradientStop Color="#FF47A447" Offset="0.0" />
+							</LinearGradientBrush>
+						</Border.Background>
+						<StackPanel Orientation="Vertical" Width="154" Height="Auto" HorizontalAlignment="Right" Margin="0,10,10,0">
+							<Image Width="84" Source="Source/记录.png" HorizontalAlignment="Center" Height="47" Margin="34,0,36,0" />
+							<TextBlock Width="144" HorizontalAlignment="Right" Margin="0,9" VerticalAlignment="Stretch" FontSize="24" UseLayoutRounding="True"><Run  FontSize="30" Text="采购记录"/></TextBlock>
+						</StackPanel>
+					</Border>
+				</ControlTemplate>
+			</Button.Template>
+		</Button>
+		<Button x:Name="buttonTemplate_Copy1" Margin="25,282,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="185" Height="113.5" VerticalAlignment="Top" BorderThickness="0" Content="">
+			<Button.Template>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,10,-3,0">
+						<Border.Background>
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+								<GradientStop Color="#FF47A447" Offset="0.0" />
+							</LinearGradientBrush>
+						</Border.Background>
+						<StackPanel Orientation="Vertical" Width="154" Height="Auto" HorizontalAlignment="Right" Margin="0,0,10,0">
+							<Image Width="84" Source="Source/缺货.png" HorizontalAlignment="Center" Height="47" Margin="34,0,36,0" />
+							<TextBlock Width="144" HorizontalAlignment="Right" Margin="0,9" VerticalAlignment="Stretch" FontSize="24" UseLayoutRounding="True"><Run  FontSize="30" Text="缺货信息"/></TextBlock>
+						</StackPanel>
+					</Border>
+				</ControlTemplate>
+			</Button.Template>
+		</Button>
+		<Button x:Name="buttonTemplate_Copy2" Margin="25,391.5,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="185" Height="113.5" VerticalAlignment="Top" BorderThickness="0" Content="">
+			<Button.Template>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,10,-3,0">
+						<Border.Background>
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+								<GradientStop Color="#FF47A447" Offset="0.0" />
+							</LinearGradientBrush>
+						</Border.Background>
+						<StackPanel Orientation="Vertical" Width="154" Height="Auto" HorizontalAlignment="Right" Margin="0,0,10,0">
+							<Image Width="84" Source="Source/开始移货.png" HorizontalAlignment="Center" Height="47" Margin="34,0,36,0" />
+							<TextBlock Width="144" HorizontalAlignment="Right" Margin="0,9" VerticalAlignment="Stretch" FontSize="24" UseLayoutRounding="True"><Run  FontSize="30" Text="个人信息"/></TextBlock>
+						</StackPanel>
+					</Border>
+				</ControlTemplate>
+			</Button.Template>
+		</Button>
+		<Grid HorizontalAlignment="Left" Height="49" Margin="37,510,0,0" VerticalAlignment="Top" Width="828" >
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="0"/>
+			</Grid.ColumnDefinitions>
+			<Border BorderThickness="0" CornerRadius="15,15,15,15" Margin="-24,0,0,0" >
+				<Border.Background>
+					<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+						<GradientStop Color=" #999999" Offset="0.5" />
+
+					</LinearGradientBrush>
+				</Border.Background>
+				<Grid>
+					<Label Content="操作员：" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="68.457" FontSize="16">
+						<Label.Foreground >
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+								<GradientStop Color="White" Offset="0.5" />
+
+							</LinearGradientBrush>
+						</Label.Foreground>
+					</Label>
+					<Label Content="何杰平" HorizontalAlignment="Left" Margin="93.457,8.68,0,0" VerticalAlignment="Top" Width="60.457" FontSize="16">
+						<Label.Foreground >
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+								<GradientStop Color="White" Offset="0.5" />
+
+							</LinearGradientBrush>
+						</Label.Foreground>
+					</Label>
+					<Label Content="登录时间" HorizontalAlignment="Left" Margin="153.914,8.68,0,0" VerticalAlignment="Top" Width="76.457" FontSize="16">
+						<Label.Foreground >
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+								<GradientStop Color="White" Offset="0.5" />
+
+							</LinearGradientBrush>
+						</Label.Foreground>
+					</Label>
+					<Label Content="工作时长：" HorizontalAlignment="Left" Margin="435.914,8.68,0,0" VerticalAlignment="Top" Width="97.457" FontSize="16">
+						<Label.Foreground >
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+								<GradientStop Color="White" Offset="0.5" />
+
+							</LinearGradientBrush>
+						</Label.Foreground>
+					</Label>
+					<Label Content="6：00" HorizontalAlignment="Left" Margin="575.414,10,0,0" VerticalAlignment="Top" Width="76.457" FontSize="16">
+						<Label.Foreground >
+							<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+								<GradientStop Color="White" Offset="0.5" />
+
+							</LinearGradientBrush>
+						</Label.Foreground>
+					</Label>
+				</Grid>
+			</Border>
+		</Grid>
+
+	</Grid>
+</Window>

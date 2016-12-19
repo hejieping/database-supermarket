@@ -1,0 +1,155 @@
+﻿<UserControl x:Class="SuperMarket.UIWpf.Buyer.StartBuy"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SuperMarket.UIWpf.Buyer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="630">
+    <Grid Margin="15,1,-15,-1" Width="630" Height="450">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border BorderThickness="1" Margin="-15,38,0,0" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="630" Height="210" VerticalAlignment="Top">
+            <DataGrid x:Name="dataGrid"/>
+        </Border>
+        <Border BorderThickness="1" Background="#FFFFF8F8" CornerRadius="10" Height="40" VerticalAlignment="Top" Margin="-15,-1,15,0"/>
+        <Border BorderThickness="1" Margin="-15,294,0,0" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="630" Height="155" VerticalAlignment="Top"/>
+        <Border BorderThickness="1" Background="#FFFFF8F8" CornerRadius="10" Height="40" VerticalAlignment="Top" Margin="-15,254,15,0">
+            <Grid/>
+        </Border>
+        <Label x:Name="label_Copy2" Content="商品名称:" Margin="360,2,200,416" FontSize="13.333" FontFamily=".HeitiUI SC" VerticalContentAlignment="Center" Foreground="#FF535050"/>
+
+        <Border  BorderThickness="0" CornerRadius="8,8,8,8" x:Name="btnt" Margin="435,0,80,416" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Bottom">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFA0A0A0" Offset="0.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBox x:Name="nameBox" Margin="5,2,0,2" TextWrapping="Wrap" Text="name" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18.667" Width="105" HorizontalContentAlignment="Stretch"/>
+        </Border>
+
+
+        <Button x:Name="nameSearch" Margin="554,0,0,418" Background="#FF636A63" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="28" Height="26" VerticalAlignment="Bottom" BorderThickness="0" Click="nameSearch_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="8,8,8,8" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF8D8D8D" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Horizontal" Width="24" Height="Auto" HorizontalAlignment="Right" Margin="0,3,3,3">
+                            <Image Width="24" Source="/SuperMarket;component/Source/查询.png" HorizontalAlignment="Center" Margin="0,2,0,-1" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label x:Name="label_Copy1" Content="商品ID：" Margin="110,5,465,418" FontSize="13.333" FontFamily=".HeitiUI SC" VerticalContentAlignment="Center" Foreground="#FF535050"/>
+        <Button x:Name="idSearch" Margin="283,0,0,418" Background="#FF636A63" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="30" Height="26" VerticalAlignment="Bottom" BorderThickness="0" Click="idSearch_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="8,8,8,8" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF8D8D8D" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Horizontal" Width="24" Height="Auto" HorizontalAlignment="Right" Margin="0,3,3,3">
+                            <Image Width="24" Source="/SuperMarket;component/Source/查询.png" HorizontalAlignment="Center" Margin="0,2,0,-1" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border  BorderThickness="0" CornerRadius="8,8,8,8" x:Name="btnt_Copy" Margin="165,0,350,416" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Bottom">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFA0A0A0" Offset="0.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBox x:Name="idBox" Margin="5,2" TextWrapping="Wrap" Text="id" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" VerticalAlignment="Center" FontSize="18.667"/>
+        </Border>
+        <DataGrid x:Name="dataGridDetail" Margin="-5,302,24,10"/>
+        <Button x:Name="addGoodButton" Margin="5,3,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="30" Height="31" VerticalAlignment="Top" BorderThickness="0" Click="addGoodButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,0,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Width="20" Source="/SuperMarket;component/Source/个人信息.png" HorizontalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="deleteGoodButton" Margin="5,259,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="30" Height="31" VerticalAlignment="Top" BorderThickness="0" Click="deleteGoodButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,0,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Width="20" Source="/SuperMarket;component/Source/删除.png" HorizontalAlignment="Center" OpacityMask="Black" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="editGoodButton" Margin="45,259,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="30" Height="31" VerticalAlignment="Top" BorderThickness="0" Click="editGoodButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,0,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Width="20" Source="/SuperMarket;component/Source/修改.png" HorizontalAlignment="Center" OpacityMask="Black" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="confirmGoodButton" Margin="575,259,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="30" Height="31" VerticalAlignment="Top" BorderThickness="0" Click="confirmGoodButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,0,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Width="20" Source="/SuperMarket;component/Source/确认.png" HorizontalAlignment="Center" OpacityMask="Black" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="cancelGoodButton" Margin="90,259,0,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" HorizontalAlignment="Left" Width="30" Height="31" VerticalAlignment="Top" BorderThickness="0" Click="cancelGoodButton_Click" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate" Margin="0,0,0,0">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Width="20" Source="/SuperMarket;component/Source/取消.png" HorizontalAlignment="Center" OpacityMask="Black" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border  BorderThickness="0" CornerRadius="8,8,8,8" x:Name="btnt_Copy1" Margin="455,0,60,160" RenderTransformOrigin="0.5,0.5" Height="30" VerticalAlignment="Bottom">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFA0A0A0" Offset="0.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBox x:Name="warehouseBox" Margin="5,2,0,2" TextWrapping="Wrap" Text="id" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="18.667" Width="105" HorizontalContentAlignment="Stretch"/>
+        </Border>
+        <Label x:Name="label_Copy" Content="仓库ID:" Margin="403,260,172,158" FontSize="13.333" FontFamily=".HeitiUI SC" VerticalContentAlignment="Center" Foreground="#FF535050"/>
+    </Grid>
+</UserControl>

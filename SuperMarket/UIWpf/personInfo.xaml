@@ -1,0 +1,48 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="SuperMarket.personInfo"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480" Width="600" Height="450">
+	<UserControl.Resources>
+		<ControlTemplate TargetType="{x:Type TextBox}" x:Key="textBoxTemplate">
+			<Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="8,8,8,8" x:Name="ButtonTemplate">
+				<Border.Background>
+					<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+						<GradientStop Color="#FFCBCBCB" Offset="0.0" />
+					</LinearGradientBrush>
+				</Border.Background>
+			</Border>
+		</ControlTemplate>
+	</UserControl.Resources>
+	<Grid Background="#FFD4CDCD">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0*"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Label x:Name="label_Copy" Content="ID" Margin="100.392,104.028,404.992,312.972" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2" Background="#00000000"/>
+		<Label x:Name="label_Copy1" Content="出生日期" Margin="100.392,184.729,404.992,232.271" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2" Background="#00000000"/>
+		<Label x:Name="label_Copy2" Content="籍贯" Margin="100.392,263.188,404.992,153.812" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2" Background="#00000000"/>
+		<Label x:Name="label_Copy3" Content="联系方式" Margin="100.392,329.318,404.992,87.682" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2" Background="#00000000"/>
+		<TextBox HorizontalAlignment="Left" Height="31.493" Margin="100.392,137.028,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="213456" VerticalAlignment="Top" Width="120" FontSize="18.667"/>
+		<TextBox HorizontalAlignment="Left" Height="31.493" Margin="100,217.729,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="1995-07-07" VerticalAlignment="Top" Width="120" FontSize="18.667"/>
+		<TextBox HorizontalAlignment="Left" Height="31.493" Margin="100,292.825,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="福建省" VerticalAlignment="Top" Width="120" FontSize="18.667"/>
+		<TextBox HorizontalAlignment="Left" Height="31.493" Margin="100,367.318,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="1822101253" VerticalAlignment="Top" Width="120" FontSize="18.667"/>
+		<Label x:Name="label_Copy4" Content="性别" Margin="336.889,104.028,168.495,312.972" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2" Background="#00000000"/>
+		<Label x:Name="label_Copy5" Content="年龄" Margin="336.889,184.729,168.495,232.271" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2" Background="#00000000"/>
+		<Label x:Name="label_Copy6" Content="薪水" Margin="336.889,263.188,168.495,153.812" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2" Background="#00000000"/>
+		<Label x:Name="label_Copy7" Content="密保方式" Margin="336.889,329.318,168.495,87.682" FontSize="18.667" FontFamily=".HeitiUI SC" Foreground="#FF535050" Grid.RowSpan="2" Background="#00000000"/>
+		<TextBox HorizontalAlignment="Left" Height="31.493" Margin="336.889,137.028,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="213456" VerticalAlignment="Top" Width="120" FontSize="18.667"/>
+		<TextBox HorizontalAlignment="Left" Height="31.493" Margin="336.497,217.729,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="1995-07-07" VerticalAlignment="Top" Width="120" FontSize="18.667"/>
+		<TextBox HorizontalAlignment="Left" Height="31.493" Margin="336.497,292.825,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="福建省" VerticalAlignment="Top" Width="120" FontSize="18.667"/>
+		<TextBox HorizontalAlignment="Left" Height="31.493" Margin="336.497,367.318,0,0" Grid.RowSpan="2" TextWrapping="Wrap" Text="123@qq.c" VerticalAlignment="Top" Width="120" FontSize="18.667"/>
+		<Image HorizontalAlignment="Left" Height="100" Margin="236.889,10,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100" Source="/SuperMarket;component/Source/员工信息.png">
+			<Image.OpacityMask>
+				<ImageBrush ImageSource="/SuperMarket;component/Source/商品类别.png"/>
+			</Image.OpacityMask>
+		</Image>
+	</Grid>
+</UserControl>

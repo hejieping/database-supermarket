@@ -1,0 +1,149 @@
+﻿<Window x:Class="SuperMarket.UIWpf.Mover.MoverWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SuperMarket.UIWpf.Mover"
+        mc:Ignorable="d"
+        Title="MoverWindow" Height="600" Width="900">
+    <Grid Background="#FFBFBFBF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border BorderThickness="1" Margin="7,55,0,64" Background="#FFFFF8F8" CornerRadius="10" HorizontalAlignment="Left" Width="223"/>
+        <Border BorderThickness="0" HorizontalAlignment="Left" Height="450" Margin="245,58,0,0" VerticalAlignment="Top" Width="630" BorderBrush="#FFD8D8D8" Background="#FFDEDEDE">
+            <ContentControl x:Name="contentControl" Margin="0,0,0,5" Height="450" />
+        </Border>
+        <Button x:Name="startToMove" Margin="25,62,682,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" BorderThickness="0" IsDefault="True" Click="startToMove_Click" Height="103" VerticalAlignment="Top" >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Vertical" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" Margin="0,5,0,10">
+                            <Image Width="50" Source="/SuperMarket;component/Source/开始采购.png" HorizontalAlignment="Center" />
+                            <TextBlock Width="Auto" HorizontalAlignment="Stretch" Margin="30,9,35,9" VerticalAlignment="Stretch" FontSize="24" UseLayoutRounding="True" Height="28"><Run Text="  开始移货"/></TextBlock>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Image x:Name="image" HorizontalAlignment="Right" Height="50" VerticalAlignment="Top" Width="892" Source="/SuperMarket;component/Source/1.jpg" Stretch="Fill"/>
+        <Label x:Name="label" Content="TongJISuperMarket" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="40" Width="225" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="21.333"/>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Width="890" Height="50" CornerRadius="15" Background="#FF9C9C9C" VerticalAlignment="Bottom"/>
+        <Label x:Name="timeLabel" Content="2016-07-19 09:40" HorizontalAlignment="Left" Margin="765,20,0,0" VerticalAlignment="Top" Height="25" Width="120" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="label_Copy" Content="通知:&#xD;&#xA;数据库大家辛苦了！&#xD;&#xA;放假回家好好休息一下！" HorizontalAlignment="Left" Margin="430,0,0,0" VerticalAlignment="Top" Height="50" Width="325" Foreground="White" FontSize="10.667"/>
+
+        <Label Content="操作员：" HorizontalAlignment="Left" Margin="30,525,0,0" VerticalAlignment="Top" Width="68" FontSize="16" FontFamily=".HeitiUI SC" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
+            <Label.Foreground >
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+                    <GradientStop Color="White" Offset="0.5" />
+
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="何杰平" HorizontalAlignment="Left" Margin="100,524,0,0" VerticalAlignment="Top" Width="61" FontSize="16" FontFamily=".HeitiUI SC" VerticalContentAlignment="Center">
+            <Label.Foreground >
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+                    <GradientStop Color="White" Offset="0.5" />
+
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="登录时间" HorizontalAlignment="Left" Margin="290,524,0,0" VerticalAlignment="Top" Width="76" FontSize="16" FontFamily=".HeitiUI SC">
+            <Label.Foreground >
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+                    <GradientStop Color="White" Offset="0.5" />
+
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="工作时长：" HorizontalAlignment="Left" Margin="665,525,0,0" VerticalAlignment="Top" Width="80" FontSize="16" FontFamily=".HeitiUI SC" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
+            <Label.Foreground >
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+                    <GradientStop Color="White" Offset="0.5" />
+
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="6：00" HorizontalAlignment="Left" Margin="750,525,0,0" VerticalAlignment="Top" Width="76" FontSize="16" FontFamily=".HeitiUI SC" VerticalContentAlignment="Center">
+            <Label.Foreground >
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+                    <GradientStop Color="White" Offset="0.5" />
+
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="2016-07-177 07:45" HorizontalAlignment="Left" Margin="370,524,0,0" VerticalAlignment="Top" Width="165" FontSize="16" FontFamily=".HeitiUI SC">
+            <Label.Foreground >
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+
+                    <GradientStop Color="White" Offset="0.5" />
+
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+
+        <Button x:Name="MoveInfo" Margin="25,169,682,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" BorderThickness="0" Click="MoveInfo_Click" Height="106" VerticalAlignment="Top">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Vertical" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" Margin="0,5,0,7">
+                            <Image Width="50" Source="/SuperMarket;component/Source/采购记录.png" HorizontalAlignment="Center" />
+                            <TextBlock Width="Auto" HorizontalAlignment="Stretch" Margin="30,9,35,9" VerticalAlignment="Stretch" FontSize="24" UseLayoutRounding="True" Height="25"><Run Text="  移货信息"/></TextBlock>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="goodLackInfo" Margin="25,282,682,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" BorderThickness="0" Click="goodLackInfo_Click" Height="103" VerticalAlignment="Top">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Vertical" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" Margin="0,5,0,0">
+                            <Image Width="50" Source="/SuperMarket;component/Source/缺货信息.png" HorizontalAlignment="Center" />
+                            <TextBlock Width="Auto" HorizontalAlignment="Stretch" Margin="30,9,35,9" VerticalAlignment="Stretch" FontSize="24" UseLayoutRounding="True" Height="29"><Run Text="  缺货信息"/></TextBlock>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="personInfo" Margin="25,390,682,0" Background="#FF399739" Foreground="White" BorderBrush="{x:Null}" FontFamily=".HeitiUI SC" FontSize="21.333" BorderThickness="0" Click="personInfo_Click" Height="96" VerticalAlignment="Top">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" CornerRadius="10,10,10,10" x:Name="ButtonTemplate">
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                <GradientStop Color="#FF47A447" Offset="0.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Vertical" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" Margin="0,5,0,0">
+                            <Image Width="50" Source="/SuperMarket;component/Source/个人信息.png" HorizontalAlignment="Center" />
+                            <TextBlock Width="Auto" HorizontalAlignment="Stretch" Margin="30,9,35,9" VerticalAlignment="Stretch" FontSize="24" UseLayoutRounding="True" Height="26"><Run Text="  个人信息"/></TextBlock>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
+</Window>

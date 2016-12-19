@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F94792C-3047-40E2-B73D-D3F7A66EFB0F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuperMarket</RootNamespace>
+    <AssemblyName>SuperMarket</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=2.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DataAccessLayer\BillDao.cs" />
+    <Compile Include="DataAccessLayer\CustomerDao.cs" />
+    <Compile Include="DataAccessLayer\EmployeeDao.cs" />
+    <Compile Include="DataAccessLayer\GoodDao.cs" />
+    <Compile Include="DataAccessLayer\MoveRecordDao.cs" />
+    <Compile Include="DataAccessLayer\ProcementDao.cs" />
+    <Compile Include="DataAccessLayer\SellStatisticDao.cs" />
+    <Compile Include="DataAccessLayer\ShelfDao.cs" />
+    <Compile Include="DataAccessLayer\TypeDao.cs" />
+    <Compile Include="DataAccessLayer\WareHouseDao.cs" />
+    <Compile Include="DataAccess\IBillDao.cs" />
+    <Compile Include="DataAccess\ICustomerDao.cs" />
+    <Compile Include="DataAccess\IEmployeeDao.cs" />
+    <Compile Include="DataAccess\IGoodDao.cs" />
+    <Compile Include="DataAccess\IMoveRecordDao.cs" />
+    <Compile Include="DataAccess\IProcurementDao.cs" />
+    <Compile Include="DataAccess\IRemoveRecordDao.cs" />
+    <Compile Include="DataAccess\ISellStatisticDao.cs" />
+    <Compile Include="DataAccess\IShelfDao.cs" />
+    <Compile Include="DataAccess\ITypeDao.cs" />
+    <Compile Include="DataAccess\IWareHouseDao.cs" />
+    <Compile Include="Entity\Bill.cs" />
+    <Compile Include="Entity\Customer.cs" />
+    <Compile Include="Entity\Employee.cs" />
+    <Compile Include="Entity\Good.cs" />
+    <Compile Include="Entity\MoveRecord.cs" />
+    <Compile Include="Entity\Procurement.cs" />
+    <Compile Include="Entity\Program.cs" />
+    <Compile Include="Entity\SellStatistic.cs" />
+    <Compile Include="Entity\Shelf.cs" />
+    <Compile Include="Entity\Type.cs" />
+    <Compile Include="Entity\WareHouse.cs" />
+    <Compile Include="MyConnection\DBConnection.cs" />
+    <Compile Include="UIWpf\Buyer\BuyerWindow.xaml.cs">
+      <DependentUpon>BuyerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Buyer\LackGood.xaml.cs">
+      <DependentUpon>LackGood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Buyer\StartBuy.xaml.cs">
+      <DependentUpon>StartBuy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Login\loginWindow.xaml.cs">
+      <DependentUpon>loginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\BuyRecord.xaml.cs">
+      <DependentUpon>BuyRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\EmployeeInfo.xaml.cs">
+      <DependentUpon>EmployeeInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\GoodInfo.xaml.cs">
+      <DependentUpon>GoodInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\GoodKind.xaml.cs">
+      <DependentUpon>GoodKind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\MainManager.xaml.cs">
+      <DependentUpon>MainManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\MoveRecord.xaml.cs">
+      <DependentUpon>MoveRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\SellRecord.xaml.cs">
+      <DependentUpon>SellRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\ShelfInfo.xaml.cs">
+      <DependentUpon>ShelfInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Manager\WareHouseInfo.xaml.cs">
+      <DependentUpon>WareHouseInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Mover\MoverWindow.xaml.cs">
+      <DependentUpon>MoverWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Mover\ShelfLackGood.xaml.cs">
+      <DependentUpon>ShelfLackGood.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Mover\StartMove.xaml.cs">
+      <DependentUpon>StartMove.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\PersonalInfo.xaml.cs">
+      <DependentUpon>PersonalInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\Seller\SellerWindow.xaml.cs">
+      <DependentUpon>SellerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\window.xaml.cs">
+      <DependentUpon>window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UIWpf\WpfTest.xaml.cs">
+      <DependentUpon>WpfTest.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UIWpf\Buyer\BuyerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Buyer\LackGood.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Buyer\StartBuy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Login\loginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIWpf\Manager\BuyRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Manager\EmployeeInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Manager\GoodInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Manager\GoodKind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Manager\MainManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Manager\MoveRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Manager\SellRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Manager\ShelfInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Manager\WareHouseInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Mover\MoverWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UIWpf\Mover\ShelfLackGood.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Mover\StartMove.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\PersonalInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\Seller\SellerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UIWpf\WpfTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\1.jpg" />
+    <Resource Include="Source\desktop.jpg" />
+    <Resource Include="Source\desktop2.jpg" />
+    <Resource Include="Source\个人信息.png" />
+    <Resource Include="Source\仓库信息.png" />
+    <Resource Include="Source\修改.png" />
+    <Resource Include="Source\删除.png" />
+    <Resource Include="Source\取消.png" />
+    <Resource Include="Source\商品类别.png" />
+    <Resource Include="Source\开始采购.png" />
+    <Resource Include="Source\查询.png" />
+    <Resource Include="Source\登录背景.png" />
+    <Resource Include="Source\确认.png" />
+    <Resource Include="Source\移货信息.png" />
+    <Resource Include="Source\缺货信息.png" />
+    <Resource Include="Source\货架信息.png" />
+    <Resource Include="Source\销售信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\商品详情.png" />
+    <Resource Include="Source\采购信息.png" />
+    <Resource Include="Source\采购记录.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
